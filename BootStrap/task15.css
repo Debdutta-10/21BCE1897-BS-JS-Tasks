@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav1 {
+    background-color: #00BFFF;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    color: white;
+}
+
+.mc1 {
+    display: flex;
+}
+
+.main-container1 {
+    width: 80%;
+    text-align: center;
+    background-color: #D8D8D8;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-container2 {
+    width: 20%;
+    height: calc(100vh - 112px); /* Adjusted height to fit within the viewport */
+    text-align: center;
+    background-color: #707070;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.mc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.text{
+    margin: auto;
+    text-align: center;
+    width: 40%;
+    margin-top: 40px;
+}
+.mc2{
+    margin: auto;
+    margin-top: 30px;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+.custom-card {
+    text-align: center;
+    line-height: 1rem;
+    width: 250px; 
+    margin: 10px; 
+}
+.custom-card .card-body .card-price {
+    font-size: 25px; /* Adjust the font size for the price */
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .mc1 {
+        flex-direction: column; /* Stack columns on top of each other for smaller screens */
+    }
+
+    .main-container1 {
+        width: 100%; /* Take full width on smaller screens */
+    }
+
+    .main-container2 {
+        flex-basis: 100%; /* Take full width on smaller screens */
+        margin-top: 20px; /* Add some margin to separate from the first column */
+    }
+    .mc2{
+        flex-direction: column; /* Stack columns on top of each other for smaller screens */
+    }
+    .custom-card {
+        width: 100%; /* Take full width on smaller screens */
+        margin: 10px 5px; /* Adjust margin for spacing */
+    }
+}

@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mc {
+    margin-top: 60px !important;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h2 {
+    text-align: center;
+}
+
+.card {
+    width: 18rem;
+    height: 400px; /* Adjust the height as needed */
+    margin-bottom: 20px;
+}
+
+.card img {
+    object-fit: cover; /* Ensures all images have the same size and are centered */
+    height: 200px; /* Adjust the height as needed */
+}
+
+.card-body a {
+    color: orange;
+    text-decoration: none;
+}

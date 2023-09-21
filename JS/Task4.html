@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4-21BCE1897</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        .mc{
+            width: 30%;
+            margin: auto;
+            margin-top: 50px !important;
+        }
+        .c1{
+            margin-bottom: 40px;
+        }
+        button{
+            padding: 3px;
+            display: block;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h2>Debdutta Mukherjee</h2>
+    <h2>21BCE1897</h2>
+    <h2>Task-4</h2>
+    <div class="mc">
+        <div class="c1">
+            <button onclick="showDate()">Show Date</button>
+            <label for="date" id="date"></label>
+        </div>
+        <div class="c2">
+            <button onclick="showTime()">Show Time</button>
+            <label for="time" id="time"></label>
+        </div>
+    </div>
+
+
+    <script>
+        function showDate() {
+            const currentDate = new Date();
+            const day = currentDate.getDate();
+            const month = currentDate.toLocaleString('en-US', { month: 'long' });
+            const year = currentDate.getFullYear();
+            const formattedDate = `${day}/${month}/${year}`;
+
+            document.getElementById("date").textContent = formattedDate;
+        }
+
+
+        function showTime() {
+            const d = new Date();
+            document.getElementById("time").innerHTML = d;
+
+        }
+    </script>
+</body>
+
+</html>

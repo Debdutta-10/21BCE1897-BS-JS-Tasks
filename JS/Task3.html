@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK-3 21BCE1897</title>
+    <style>
+        .con{
+            border: 2px solid black;
+            width: 30%;
+            margin: auto;
+        }
+        label{
+            padding: 5px;
+            margin: 5px;
+        }
+        input{
+            padding: 5px;
+            margin: 5px;
+        }
+        button{
+            margin: 5px;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Debdutta Mukherjee</h2>
+    <h2>21BCE1897</h2>
+    <h2>Task-3</h2>
+    <div class="con">
+        <div>
+            <label for="fn">1st Number: </label>
+            <input type="number" id="fn">
+        </div>
+        <div>
+            <label for="sn">2nd Number: </label>
+            <input type="number" id="sn">
+        </div>
+        <div>
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="divide()">Divide</button>
+        </div>
+        <div>
+            <label for="result">The result is: </label>
+        </div>
+        <div>
+            <label for="display" id="display"></label>
+        </div>
+    </div>
+
+
+    <script>
+        function multiply() {
+            const firstNumber = parseFloat(document.getElementById("fn").value);
+            const secondNumber = parseFloat(document.getElementById("sn").value);
+
+            if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+                const result = firstNumber * secondNumber;
+                document.getElementById("display").textContent = result;
+            } else {
+                document.getElementById("display").textContent = "Invalid input";
+            }
+        }
+
+        function divide() {
+            const firstNumber = parseFloat(document.getElementById("fn").value);
+            const secondNumber = parseFloat(document.getElementById("sn").value);
+
+            if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+                if (secondNumber === 0) {
+                    document.getElementById("display").textContent = "Division by zero";
+                } else {
+                    const result = firstNumber / secondNumber;
+                    document.getElementById("display").textContent = result;
+                }
+            } else {
+                document.getElementById("display").textContent = "Invalid input";
+            }
+        }
+    </script>
+</body>
+
+</html>

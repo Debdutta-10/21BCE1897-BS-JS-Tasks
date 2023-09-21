@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Animation</title>
+    <style>
+        h1{
+            color: blue;
+        }
+        img{
+            width: 400px;
+        }
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        @keyframes moveTrain {
+            from { transform: translateX(-50%); }
+            to { transform: translateX(300%); }
+        }
+    </style>
+</head>
+<body>
+    <img src="train.png" alt="Moving Train">
+    <div class="controls">
+        <h1>Click on the following buttons to handle animations</h1>
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+    </div>
+
+    <script>
+        const startButton = document.getElementById("startButton");
+        const stopButton = document.getElementById("stopButton");
+        const trainImage = document.querySelector("img");
+
+        startButton.addEventListener("click", () => {
+          trainImage.style.animationName = "moveTrain";
+          trainImage.style.animationDuration = "5s";
+        });
+
+        stopButton.addEventListener("click", () => {
+          trainImage.style.animationPlayState = "paused";
+        });
+    </script>
+</body>
+</html>

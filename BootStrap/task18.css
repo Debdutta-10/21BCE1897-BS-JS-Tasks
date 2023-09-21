@@ -1,0 +1,12 @@
+h2{
+    text-align: center;
+}
+.grey-container {
+    border-radius: 20px;
+    background-color: #E8E8E8;
+}
+
+.red-button {
+    width: 60%;
+    background-color: red;
+}
